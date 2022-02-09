@@ -28,9 +28,8 @@ resource "aws_ecs_cluster" "this" {
 # capacity provider ASG
 ################################################################################
 
-resource "aws_ecs_capacity_provider" "provider-asg" {
-  name = "provider-asg"
-
+resource "aws_ecs_capacity_provider" "this" {
+  name = var.name_provider
   auto_scaling_group_provider {
     auto_scaling_group_arn = var.autoscaling_group_arn
   }

@@ -33,6 +33,12 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "name_provider" {
+  description = "The name of the provider"
+  type        = string
+  default     = null
+}
 variable "autoscaling_group_arn" {
   description = "The name arn id of the ressource group to attach to ECS"
   type        = string
